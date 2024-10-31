@@ -16,7 +16,7 @@ Let's dive deeper into how to use Text Embeddings to help suggest similar words!
 - [Term Frequency - Inverse Document Frequency (TF-IDF)](#term-frequency---inverse-document-frequency-tf-idf)
 - [How are Embeddings different](#how-are-embeddings-different)
   - [Word2Vec](#word2vec)
-  - [GloVe](#glove)
+  - [Global Representation of Vectors (GloVe)](#global-representation-of-vectors-glove)
 - [How Text Embeddings capture analogies](#how-text-embeddings-capture-analogies)
 - [Evaluating models during production using RAG](#evaluating-models-during-production-using-rag)
 - [Conclusion](#conclusion)
