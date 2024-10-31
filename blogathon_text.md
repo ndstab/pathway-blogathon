@@ -234,6 +234,12 @@ The fundamental approach of Text Embeddings is that we can represent **words as 
 
 	![](https://i.imgur.com/M0vVuao.jpeg)
 
+## **Evaluating models during production using RAG**
+The Internet is constantly flowing with an enormous amount of data, and our models need to keep up with it, constantly evolving according to the trends and information. One key technique to handle this is the **Retrieval-Augmented-Generation (RAG)**. RAG is an AI framework that combines the strengths of traditional information retrieval systems (such as search and databases) with the capabilities of **generative large language models (LLMs)**. The flow is as follows:-
+- The user first enters a query, which is transformed into its embeddings to capture its semantic meaning.
+- Documents are retrieved based on the embeddings, and then these docs, along with the embeddings are fed into a generative model.
+- This helps to create a very contextual, efficient response, which is very much suited to the user.
+
 ## Conclusion
 Text embeddings are a way to represent words or textual documents as large dimensional mathematical vectors. They transform words into numerical vectors which capture their meaning based on their **context.**
 
@@ -250,9 +256,11 @@ Here's a quick comparison between the models on the basis of their strengths, we
 | Model          | Strengths                                                                 | Weaknesses                                                         | Key Use Cases                          |
 |----------------|---------------------------------------------------------------------------|---------------------------------------------------------------------|----------------------------------------|
 | **Bag of Words** | - Implementation is simple and very effective with small datsets | - Word order and context is ignored.<br>- High-dimensional and sparse vectors if vocabulary is large. | - Text classification tasks with small datasets.<br>- Basic sentiment analysis. |
-| **TF-IDF**      | - Weighs words by importance (frequency) within the document.<br>- Reduces impact of common and less informative words. | - Still ignores word order and semantic meaning.<br>- High-dimensional vectors for large vocabularies. | - Document retrieval and ranking.<br>- Keyword extraction can be done. |
-| **Word2Vec**    | - Captures semantic meaning and relationships between words.<br>- Dense, low-dimensional vectors.<br>- Effective for similarity and analogy tasks. | - Training can be computationally intensive.<br>- Requires large datasets for quality embeddings. | - Semantic search.<br>- Efficient Sentiment analysis.<br>- Suggesting similar words. |
+| **TF-IDF**      | - Weighs words by importance (frequency) within the document.<br>- Reduces impact of common and less informative words. | - Ignores word order and semantic meaning.<br>- High-dimensional vectors for large vocabularies. | - Document retrieval and ranking.<br>- Keyword extraction can be done. |
+| **Word2Vec**    | - Captures semantic meaning and relationships between words.<br>- Dense, non-sparse vectors.<br>- Effective for similarity and analogy tasks. | - Training can be computationally heavy.<br>- Requires large datasets for better quality. | - Semantic search.<br>- Better Sentiment analysis.<br>- Suggesting similar words. |
 | **GloVe**       | - Captures both global and local context effectively.<br>- Dense, low-dimensional vectors.<br>- Good for analogy and similarity tasks. | - Computationally intensive to train.<br>- Requires substantial preprocessing and large corpora for effectiveness. | - Document classification.<br>- Named entity recognition.<br>- Similarity and analogy tasks. |
+
+Traditional techniques for representing words, such as Bag of Words, fail to capture the precise meaning of words and their relationships with other words. Word Embeddings overcome this issue as they can capture the semantic relationships between words and group them. For example, a search like 'running shoes' will also surface results for 'athletic footwear'- ensuring better recognition of the meaning.
 
 In this blog we discussed how the text embeddings capture the analogies using simple examples like Countries and Capitals, Verb Tenses and Gender Analogy. Now you know better how Text Embeddings work in hidden, plain sight!
 
@@ -265,4 +273,6 @@ In this blog we discussed how the text embeddings capture the analogies using si
 ## **Authors**
 **Team :**  **LLM-ited AI-dition**
 Yashasvee Taiwade - *IIT Bombay*
+yashasvee.taiwade@gmail.com
 Sajjad Nakhwa - *IIT Bombay*
+sajjadnakhwa8@gmail.com
