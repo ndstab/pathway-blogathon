@@ -244,7 +244,7 @@ A walk through the blog is as follows:
  - *Skip-gram* : target word is known and the model tries to guess the context using it
  - *GloVe* : constructs a co-occurrence matrix which is 				then used to capture the semantic relations between the words
 
-Here's a quick comparison between the models on the basis of their strengths, weaknesses and the use cases :-
+Here's a quick comparison between the models on the basis of their strengths, weaknesses and key use cases :-
 | Model          | Strengths                                                                 | Weaknesses                                                         | Key Use Cases                          |
 |----------------|---------------------------------------------------------------------------|---------------------------------------------------------------------|----------------------------------------|
 | **Bag of Words** | - Simple to implement and interpret.<br>- Effective with small datasets. | - Ignores word order and context.<br>- High-dimensional vectors if vocabulary is large. | - Text classification tasks with small datasets.<br>- Basic sentiment analysis. |
