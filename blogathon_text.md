@@ -9,6 +9,19 @@ Significant advancements in the field have been achieved because of Text Embeddi
 
 Let's dive deeper into how to use Text Embeddings to help suggest similar words!
 
+## Table of Content
+- [What are Text Embeddings?](#what-are-text-embeddings)
+  - [Issues with the Traditional Models](#issues-with-the-traditional-models)
+- [Bag Of Words](#bag-of-words)
+- [Term Frequency - Inverse Document Frequency (TF-IDF)](#term-frequency---inverse-document-frequency-tf-idf)
+- [How are Embeddings different](#how-are-embeddings-different)
+  - [Word2Vec](#word2vec)
+  - [GloVe](#glove)
+- [How Text Embeddings capture analogies](#how-text-embeddings-capture-analogies)
+- [Conclusion](#conclusion)
+- [Citations](#citations)
+- [Authors](#authors)
+
 ## **What are text embeddings?**
 Text embeddings are a way to represent words or textual documents as large dimensional mathematical vectors which allows our dear “dumb” computers to understand and process them more efficiently. They transform words into numerical vectors which capture their meaning based on their **context.** In this way, words that share similar meanings, context, or analogies are placed close together in the **embedding space.** Here’s a highly simplified example of how the words are represented and what counts as being close to each other.
 
