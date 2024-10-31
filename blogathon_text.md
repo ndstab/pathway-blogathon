@@ -123,6 +123,7 @@ In this section you will see two of the most popular models that are currently b
 The Word2Vec model is a highly advanced machine learning model, currently being used for nearly all Natural Language Processing applications. It was developed by **Google** in 2013. The model works through two primary methods: **Continuous Bag of Words (CBOW)** and **Skip-gram**. These methods enable Word2Vec to learn word associations and place words with similar meanings close to each other in the vector space. This concept is often summarized by the phrase 	
 ***"You shall know a word by the company it keeps."***
 
+Let's see how we can use the Word2Vec Model to help us with the suggestions.
 The main architecture of the model can be associated to two methods as mentioned above:-
 
 **Continuous Bag Of Words (CBOW):**
@@ -152,7 +153,7 @@ This method works **inversely** to the CBOW, where the **target word is known** 
 
 ![](https://i.imgur.com/nPweGEP.jpeg)
 
-### GloVe
+### Global Representation of Vectors (GloVe)
 
 The GloVe method for text embeddings was developed at **Stanford by Jeffrey Pennington** and others. It is referred to as **global vectors** because the entire global corpus statistics were captured directly by the model. This helps it in finding great applications in word analogies. Unlike Word2Vec which relies on local contextual windows, the GloVe model relies on the global statistical parameters from a large corpus.
 
