@@ -7,7 +7,7 @@ The world is filled with fascinating technology. It is overwhelming to see such 
 
 Significant advancements in the field have been achieved because of Text Embeddings, which addressed some key challenges faced in representing words, sentences, and documents in ways that machines can understand and prove to be highly efficient and accurate. 
 
-Let's dive deeper into Text Embeddings!
+Let's dive deeper into how to use Text Embeddings to help suggest similar words!
 
 ## **What are text embeddings?**
 Text embeddings are a way to represent words or textual documents as large dimensional mathematical vectors which allows our dear “dumb” computers to understand and process them more efficiently. They transform words into numerical vectors which capture their meaning based on their **context.** In this way, words that share similar meanings, context, or analogies are placed close together in the **embedding space.** Here’s a highly simplified example of how the words are represented and what counts as being close to each other.
