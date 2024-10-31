@@ -18,6 +18,7 @@ Let's dive deeper into how to use Text Embeddings to help suggest similar words!
   - [Word2Vec](#word2vec)
   - [GloVe](#glove)
 - [How Text Embeddings capture analogies](#how-text-embeddings-capture-analogies)
+- [Evaluating models during production using RAG](#evaluating-models-during-production-using-rag)
 - [Conclusion](#conclusion)
 - [Citations](#citations)
 - [Authors](#authors)
