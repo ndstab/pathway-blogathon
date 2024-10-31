@@ -244,7 +244,15 @@ A walk through the blog is as follows:
  - *Skip-gram* : target word is known and the model tries to guess the context using it
  - *GloVe* : constructs a co-occurrence matrix which is 				then used to capture the semantic relations between the words
 
-In this blog we discussed how the text embeddings capture the analogies using simple examples like Countries and Capitals, Verb Tenses and Gender Analogy. Now you know better how Text Embeddings work in hidden, plain sight.  
+Here's a quick comparison between the models on the basis of their strengths, weaknesses and the use cases :-
+| Model          | Strengths                                                                 | Weaknesses                                                         | Key Use Cases                          |
+|----------------|---------------------------------------------------------------------------|---------------------------------------------------------------------|----------------------------------------|
+| **Bag of Words** | - Simple to implement and interpret.<br>- Effective with small datasets. | - Ignores word order and context.<br>- High-dimensional vectors if vocabulary is large. | - Text classification tasks with small datasets.<br>- Basic sentiment analysis. |
+| **TF-IDF**      | - Weighs words by importance (frequency) within the document.<br>- Reduces impact of common, less informative words. | - Still ignores word order and semantic meaning.<br>- High-dimensional vectors for large vocabularies. | - Document retrieval and ranking.<br>- Keyword extraction. |
+| **Word2Vec**    | - Captures semantic meaning and relationships between words.<br>- Dense, low-dimensional vectors.<br>- Effective for similarity and analogy tasks. | - Training can be computationally intensive.<br>- Requires large datasets for quality embeddings. | - Semantic search.<br>- Sentiment analysis.<br>- Similar word suggestions. |
+| **GloVe**       | - Captures both global (corpus-wide) and local context effectively.<br>- Dense, low-dimensional vectors.<br>- Good for analogy and similarity tasks. | - Computationally intensive to train.<br>- Requires substantial preprocessing and large corpora for effectiveness. | - Document classification.<br>- Named entity recognition.<br>- Similarity and analogy tasks. |
+
+In this blog we discussed how the text embeddings capture the analogies using simple examples like Countries and Capitals, Verb Tenses and Gender Analogy. Now you know better how Text Embeddings work in hidden, plain sight!
 
 ## **Citations**
 - [IBM's blog on embeddings](https://www.ibm.com/topics/embedding)
