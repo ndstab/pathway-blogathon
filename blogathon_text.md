@@ -165,6 +165,9 @@ This method works **inversely** to the CBOW, where the **target word is known** 
     print(f"Top 10 words similar to '{example_word}':")
     for word, similarity in similar_words:
         print(f"{word}: {similarity:.4f}")
+
+ This very simple looking snippet uses the powerful `Word2Vec` model by Google News. The `300` tells us the dimensions of the embedded vectors. This sample tells us the most similar words to the word `computer` using the similarity score that you have looked before. 
+ 
 *Output :*
 
 ![](https://i.imgur.com/cFAfH0s.jpeg)
