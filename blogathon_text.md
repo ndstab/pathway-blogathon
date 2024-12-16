@@ -214,6 +214,7 @@ Let us now show you the actual power of the GloVe model with some handy code:-
     for word, similarity in similar_words_glove:
         print(f"{word}: {similarity:.4f}")
 
+Here you load the GloVe model stored in the `glove.6B.100d.txt` file. the `6B` denotes the dataset that it was used to train, which contained around 6 billion tokens (words and symbols) and the `100d` (as you might have guessed), denotes that the embedded vectors are 100 dimensional. Again, you pick out the top ten most similar words, based on cosine similarity score, which are presented in the form of a list. 
 *Output :*
 
 ![**Output for the above code**](https://i.imgur.com/hwMVi6e.jpeg)
