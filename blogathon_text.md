@@ -60,7 +60,7 @@ In the popular Bag Of Words Model, you **vectorize words** based on their count 
 Now let’s see this in action! The corpus is a small set of search queries of buying electronics :-
 
     import pandas as pd
-    from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
+    from sklearn.feature_extraction.text import CountVectorizer
     from nltk.corpus import stopwords
     import nltk
     search_queries = [
@@ -119,6 +119,7 @@ Where,
 Here’s the representation through a code snippet:-
 
     #tf-idf representation
+    from sklearn.feature_extraction.text import TfidfVectorizer
     vectorizer_tfidf = TfidfVectorizer()
     X_tfidf = vectorizer_tfidf.fit_transform(corpus)
     X_tfidf_dense = X_tfidf.toarray()
@@ -126,6 +127,8 @@ Here’s the representation through a code snippet:-
     df_tfidf.insert(0, 'Index', range(len(corpus)))
     print("\nTF-IDF Table:")
     print(df_tfidf.to_string(index=False))
+    
+The above snippet of code converts our corpus into a TF-IDF representation, which measures the importance of words in each document relative to the entire corpus. Using `TfidfVectorizer` from the `sklearn` library, it computes the TF-IDF values for all words, transforms the data into a dense array, and organizes it into a dataframe for better readability. The final table shows each word's relevance across the documents, making it useful for text analysis tasks like identifying significant terms in a dataset.
 
 *TF-IDF Table :*
 
