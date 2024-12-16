@@ -1,7 +1,7 @@
 ﻿
 
 # **How Text Embeddings help suggest similar words**
-The world is filled with fascinating technology. It is overwhelming to see such extravagant machines, but we tend to forget the engineering that goes behind our most trivial tasks . An example of this is our unofficial right-hand man: our smartphone. We often just mindlessly do our tasks or scroll through social media without even realizing how incredible the procedure behind it is. The thorough applications of **Natural Language Processing (NLP)** and **Machine Learning (ML)** in our smartphones, such as personal assistant apps like Amazon Alexa and Google Translate, GPS navigation apps and spam filtering and even the auto-correction as we write this blog, are hidden in plain sight.
+The world is filled with fascinating technology. It is overwhelming to see such extravagant machines, but you tend to forget the engineering that goes behind our most trivial tasks . An example of this is our unofficial right-hand man: our smartphone. You often just mindlessly do our tasks or scroll through social media without even realizing how incredible the procedure behind it is. The thorough applications of **Natural Language Processing (NLP)** and **Machine Learning (ML)** in our smartphones, such as personal assistant apps like Amazon Alexa and Google Translate, GPS navigation apps and spam filtering and even the auto-correction as we write this blog, are hidden in plain sight.
 
   
 
@@ -28,7 +28,7 @@ Text embeddings are a way to represent words or textual documents as large dimen
 
 ![](https://i.imgur.com/caRaOyN.png)
 
-Here we can see that the words “king” and “queen” are placed together in the space, whereas “bartender” is away from them, indicating no strong connection. Although this diagram only portrays 2-D vectors, in actual applications, the vectors are much larger (even upto 100 dimensions), and this is in fact a great advantage since let’s say a vector holding 100 values, is able to represent 100 different features!
+Here you can see that the words “king” and “queen” are placed together in the space, whereas “bartender” is away from them, indicating no strong connection. Although this diagram only portrays 2-D vectors, in actual applications, the vectors are much larger (even upto 100 dimensions), and this is in fact a great advantage since let’s say a vector holding 100 values, is able to represent 100 different features!
 
 Another key usage of these embeddings is to handle polysemic words, which are the same sounding/written words having different meanings as per the context. For example, consider these two sentences :-
 
@@ -46,9 +46,9 @@ Text Embeddings models such as Word2Vec, GLoVe, and BERT, represent words as den
 Speaking about the traditional models, let’s dive in a bit in the most used earlier models, The Bag Of Words and the Term Frequency - Inverse Document Frequency.
 
 ## **Bag of words**
-Before we start digging into them, let’s set the problem that we will be solving throughout this blog. You will be working with word suggestions for search engines. This is a really important problem for the field of Search Engine Optimization (SEO).
+Before you start digging into them, let’s set the problem that you will be solving throughout this blog. You will be working with word suggestions for search engines. This is a really important problem for the field of Search Engine Optimization (SEO).
 
-In the popular Bag Of Words Model, we **vectorize words** based on their count in the document or sample. Here’s how you can build a BOW :-
+In the popular Bag Of Words Model, you **vectorize words** based on their count in the document or sample. Here’s how you can build a BOW :-
 
 -   You remove punctuations and lower the case
     
@@ -138,12 +138,12 @@ In this section you will see two of the most popular models that are currently b
 The Word2Vec model is a highly advanced machine learning model, currently being used for nearly all Natural Language Processing applications. It was developed by **Google** in 2013. The model works through two primary methods: **Continuous Bag of Words (CBOW)** and **Skip-gram**. These methods enable Word2Vec to learn word associations and place words with similar meanings close to each other in the vector space. This concept is often summarized by the phrase 	
 ***"You shall know a word by the company it keeps."***
 
-Let's see how we can use the Word2Vec Model to help us with the suggestions.
+Let's see how you can use the Word2Vec Model to help us with the suggestions.
 The main architecture of the model can be associated to two methods as mentioned above:-
 
 **Continuous Bag Of Words (CBOW):**
 
-Here, instead of just using the count of each word, we define a sliding window which picks a target word, and its surrounding words are the context. For example:-
+Here, instead of just using the count of each word, you define a sliding window which picks a target word, and its surrounding words are the context. For example:-
 ![](https://i.imgur.com/tE8Ge5B.png)
 Here the word “pipelines” is the target word, whereas the other surrounding words explain the context.
 
@@ -215,12 +215,12 @@ Let us now show you the actual power of the GloVe model with some handy code:-
 ## **How text embeddings capture analogies**
 Let us now try to understand how Text Embeddings capture the contextual relationships between countries and their capitals or verbs and tenses using GloVe embeddings, t-SNE, and PCA for visualization.
 
-The fundamental approach of Text Embeddings is that we can represent **words as vectors** where every word can be expressed as a **numerical vector in a high-dimensional space**. Let's take the word 'king' for example. We can represent 'king' in an n-dimensional space where it will have n attributes. Words that appear in a similar context to 'king' will be **closer** to it in the embedding space. You can perform certain vector operations to reveal relationships between different words. The relationships can be shown as follows:-
+The fundamental approach of Text Embeddings is that you can represent **words as vectors** where every word can be expressed as a **numerical vector in a high-dimensional space**. Let's take the word 'king' for example. You can represent 'king' in an n-dimensional space where it will have n attributes. Words that appear in a similar context to 'king' will be **closer** to it in the embedding space. You can perform certain vector operations to reveal relationships between different words. The relationships can be shown as follows:-
 1.  **Countries and Capitals :** The interrelation between Paris and France is analogous to the interrelation between Berlin and Germany. Subtracting France from Paris isolates the concept of a "capital city" concerning a country. The relation between the four words in the vector space can be presented as follows:
 
 	*vec(Paris) − vec(France)≈vec(Germany) - vec(Berlin)*
 
-	Hence, we can say, '"Paris is to France as Berlin is to Germany".
+	Hence, you can say, '"Paris is to France as Berlin is to Germany".
 
 2. **Verb Tenses :** Verb Tenses can also be shown similarly. You can consider "Walking is to Walked" as "Running is to Ran". In the vector space, it is represented as follows:
 
@@ -276,7 +276,7 @@ Here's a quick comparison between the models on the basis of their strengths, we
 
 Traditional techniques for representing words, such as Bag of Words, fail to capture the precise meaning of words and their relationships with other words. Word Embeddings overcome this issue as they can capture the semantic relationships between words and group them. For example, a search like 'running shoes' will also surface results for 'athletic footwear'- ensuring better recognition of the meaning.
 
-In this blog we discussed how the text embeddings capture the analogies using simple examples like Countries and Capitals, Verb Tenses and Gender Analogy. Now you know better how Text Embeddings work in hidden, plain sight!
+In this blog you saw how the text embeddings capture the analogies using simple examples like Countries and Capitals, Verb Tenses and Gender Analogy. Now you know better how Text Embeddings work in hidden, plain sight!
 
 ## **Citations**
 - [IBM's blog on embeddings](https://www.ibm.com/topics/embedding)
