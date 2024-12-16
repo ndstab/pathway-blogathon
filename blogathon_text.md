@@ -1,7 +1,7 @@
 ﻿
 
 # **How Text Embeddings help suggest similar words**
-The world is filled with fascinating technology. It is overwhelming to see such extravagant machines, but you tend to forget the engineering that goes behind our most trivial tasks . An example of this is our unofficial right-hand man: our smartphone. You often just mindlessly do our tasks or scroll through social media without even realizing how incredible the procedure behind it is. The thorough applications of **Natural Language Processing (NLP)** and **Machine Learning (ML)** in our smartphones, such as personal assistant apps like Amazon Alexa and Google Translate, GPS navigation apps and spam filtering and even the auto-correction as we write this blog, are hidden in plain sight.
+The world is filled with fascinating technology. It is overwhelming to see such extravagant machines, but you tend to forget the engineering that goes behind our most trivial tasks . An example of this is your unofficial right-hand man: your smartphone. You often just mindlessly do your tasks or scroll through social media without even realizing how incredible the procedure behind it is. The thorough applications of **Natural Language Processing (NLP)** and **Machine Learning (ML)** in your smartphones, such as personal assistant apps like Amazon Alexa and Google Translate, GPS navigation apps and spam filtering and even the auto-correction as we write this blog, are hidden in plain sight.
 
   
 
