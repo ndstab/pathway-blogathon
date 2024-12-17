@@ -222,6 +222,15 @@ Here you load the GloVe model stored in the `glove.6B.100d.txt` file. the `6B` d
 ## **How text embeddings capture analogies**
 Let us now try to understand how Text Embeddings capture the contextual relationships between countries and their capitals or verbs and tenses using GloVe embeddings, t-SNE, and PCA for visualization.
 
+As you've already looked through GloVe before, let us go over t-SNE and PCA in the following sections.
+### t-SNE (t-distributed Stochastic Neighbor Embedding)
+t-SNE, short for t-distributed Stochastic Neighbor Emulation, is an unsupervised Machine Learning algorithm for dimensionality reduction ideal for visualizing high-dimensional data. It was developed in 2008 by **Laurens van der Maaten** and **Geoffery Hinton**. The process involves embedding high-dimensional points in low dimensions so that data loss is to a minimum. It preserves similarities between points as Nearby points in the high-dimensional space correspond to nearby embedded low-dimensional points. The same applies to distant points.
+
+### PCA (Principal Component Analysis)
+The PCA unsupervised machine learning algorithm, which stands for Principal Component Analysis, was invented by the mathematician **Karl Pearson** in 1901. The following method also focuses on reducing dimensionality. Data in the high-dimensional space is mapped to data in the lower-dimensional space; the variance of the data in the lower-dimensional space should be the maximum. It is a statistical process that uses an orthogonal transformation and converts a set of correlated variables to a set of uncorrelated variables. 
+
+Now that you are well equipped with these powerful dimensionality reduction techniques, let’s move onto our fun analogies.
+
 The fundamental approach of Text Embeddings is that you can represent **words as vectors** where every word can be expressed as a **numerical vector in a high-dimensional space**. Let's take the word 'king' for example. You can represent 'king' in an n-dimensional space where it will have n attributes. Words that appear in a similar context to 'king' will be **closer** to it in the embedding space. You can perform certain vector operations to reveal relationships between different words. The relationships can be shown as follows:-
 1.  **Countries and Capitals :** The interrelation between Paris and France is analogous to the interrelation between Berlin and Germany. Subtracting France from Paris isolates the concept of a "capital city" concerning a country. The relation between the four words in the vector space can be presented as follows:
 
