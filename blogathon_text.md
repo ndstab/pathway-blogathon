@@ -11,12 +11,13 @@ Let's dive deeper into how to use Text Embeddings to help suggest similar words!
 
 ## Table of Contents
 - [What are Text Embeddings?](#what-are-text-embeddings)
-  - [Issues with the Traditional Models](#issues-with-the-traditional-models)
+- [Language - A Challenge for Eons](#language---a-challenge-for-eons)
+- [Overview of the Models](#overview-of-the-models)
 - [Bag Of Words](#bag-of-words)
 - [Term Frequency - Inverse Document Frequency (TF-IDF)](#term-frequency---inverse-document-frequency-tf-idf)
-- [How are Embeddings different](#how-are-embeddings-different)
-  - [Word2Vec](#word2vec)
-  - [Global Representation of Vectors (GloVe)](#global-representation-of-vectors-glove)
+- [Issues with the traditional models](#issues-with-the-traditional-models)
+- [Word2Vec](#word2vec)
+- [Global Representation of Vectors (GloVe)](#global-representation-of-vectors-glove)
 - [How Text Embeddings capture analogies](#how-text-embeddings-capture-analogies)
 - [Evaluating models during production using RAG](#evaluating-models-during-production-using-rag)
 - [Conclusion](#conclusion)
