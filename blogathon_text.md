@@ -42,7 +42,7 @@ Understanding language has always been a challenge. English itself is a very fun
 
 ## Overview of the Models
 
-## Bag of words
+## Bag Of Words
 The Bag-Of-Words model is a kind of a representation which ignores the word ordering and context, but focuses on word **multiplicity**. Although being sub-optimal, it finds its used in problems where word count can be used as a feature for solving the problem. The very first reference of this model can go back to 1954! It was published in an article by **Zellig Harris**.
 
 In the popular Bag Of Words Model, you **vectorize words** based on their count in the document or sample. Here’s how you can build a BOW :-
@@ -133,13 +133,11 @@ The above snippet of code converts our corpus into a TF-IDF representation, whic
 
 
 ### **Issues with the traditional models**
-The traditional models such as the Bag Of Words (BOW) or the Term-Frequency Inverse Document Frequency (TF-IDF) models relied on trivial metrics such as the count of each word and term frequencies. This way, the words are represented as individual entities, hence they lose important properties such as ordering, contextual information, analogous words and sparsity due to high dimensionality.
+The traditional models such as the Bag Of Words (BOW) or the Term-Frequency Inverse Document Frequency (TF-IDF) models relied on trivial metrics such as the count of each word and term frequencies. This way, the words are represented as individual entities, hence they lose important properties such as ordering, contextual information, and analogous words. They also result in sparse vectors with high dimensionality which is computationally inefficient.
 
 Text Embeddings models such as Word2Vec, GLoVe, and BERT, represent words as dense high dimensional vectors. This way, similar words can be represented closer to each other and the context of the words is captured. For example the words “happy” and “joyful” are closer in the embedding space. Also the **word ordering is preserved**. Sentences such as “The man bit the dog” vs “The dog bit the man” are interpreted differently (as they should be), while the earlier models would capture no difference between them.
 
-
-## **How are embeddings different**
-In this section you will see two of the most popular models that are currently being used in text embeddings, which are the Word2Vec model and the GloVe model.
+Let us now look at two of the most popular, and highly advanced models, Word2Vec and GloVe.
 
 ### **Word2Vec**
 The Word2Vec model is a highly advanced machine learning model, currently being used for nearly all Natural Language Processing applications. It was developed by **Google** in 2013. The model works through two primary methods: **Continuous Bag of Words (CBOW)** and **Skip-gram**. These methods enable Word2Vec to learn word associations and place words with similar meanings close to each other in the vector space. This concept is often summarized by the phrase 	
