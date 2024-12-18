@@ -1,17 +1,17 @@
-﻿
+
 
 # **How Text Embeddings help suggest similar words**
-The world is filled with fascinating technology. It is overwhelming to see such extravagant machines, but you tend to forget the engineering that goes behind our most trivial tasks . An example of this is your unofficial right-hand man: your smartphone. You often just mindlessly do your tasks or scroll through social media without even realizing how incredible the procedure behind it is. The thorough applications of **Natural Language Processing (NLP)** and **Machine Learning (ML)** in your smartphones, such as personal assistant apps like Amazon Alexa and Google Translate, GPS navigation apps and spam filtering and even the auto-correction as we write this blog, are hidden in plain sight.
+The world is filled with fascinating technology. It can feel overwhelming to see such extravagant machines and systems at work, yet it is easy to overlook the intricate engineering powering our most routine tasks. Consider, for example, the smartphone you rely on every day. We often use it mindlessly—scrolling through social media, checking emails, or chatting with friends—without appreciating the sophisticated processes working behind the scenes.
 
-  
+Among the most transformative technologies embedded in smartphones are Natural Language Processing (NLP) and Machine Learning (ML). These technologies enable personal assistants like Amazon Alexa and Google Translate, enhance GPS navigation apps, filter out spam emails, and even assist with auto-correction as we write. They are seamlessly integrated into our daily lives, often hidden in plain sight.
 
-Significant advancements in the field have been achieved because of Text Embeddings, which addressed some key challenges faced in representing words, sentences, and documents in ways that machines can understand and prove to be highly efficient and accurate. 
+Significant advancements in the field have been achieved because of Text Embeddings, a technique that tackles key challenges in representing words, sentences, and documents in machine-readable formats. Text embeddings enable higher accuracy and efficiency in NLP tasks and have become a foundation for many modern applications.
 
-Let's dive deeper into how to use Text Embeddings to help suggest similar words!
+This blog post delves deeper into how to Text Embeddings help suggest similar words, exploring various models and techniques that have revolutionized our understanding of language.
 
 ## Table of Contents
 - [What are Text Embeddings?](#what-are-text-embeddings)
-- [Language - A Challenge for Eons](#language---a-challenge-for-eons)
+- [Understanding Languages - A Challenge for Eons](#language---a-challenge-for-eons)
 - [Overview of the Models](#overview-of-the-models)
 - [Bag Of Words](#bag-of-words)
 - [Term Frequency - Inverse Document Frequency (TF-IDF)](#term-frequency---inverse-document-frequency-tf-idf)
@@ -27,43 +27,51 @@ Let's dive deeper into how to use Text Embeddings to help suggest similar words!
 - [Authors](#authors)
 
 ## **What are Text Embeddings?**
-Text embeddings are a way to represent words or textual documents as large dimensional mathematical vectors which allows our dear “dumb” computers to understand and process them more efficiently. They transform words into numerical vectors which capture their meaning based on their **context.** In this way, words that share similar meanings, context, or analogies are placed close together in the **embedding space.** Here’s a highly simplified example of how the words are represented and what counts as being close to each other.
+Text embeddings are a way to represent words or textual documents as large dimensional mathematical vectors, enabling computers—traditionally “dumb” in understanding language—to process text more effectively. They transform words into numerical vectors which capture their meaning based on their **context.** In this way, words that share similar meanings, context, or analogies are placed close together in the **embedding space.** Here’s a highly simplified example of how the words are represented and what counts as being close to each other.
 
 ![](https://i.imgur.com/caRaOyN.png)
 
-Here you can see that the words “king” and “queen” are placed together in the space, whereas “bartender” is away from them, indicating no strong connection. Although this diagram only portrays 2-D vectors, in actual applications, the vectors are much larger (even upto 100 dimensions), and this is in fact a great advantage since let’s say a vector holding 100 values, is able to represent 100 different features!
+Here, the words “king” and “queen” are placed together in the space, whereas “bartender” is away from them, indicating no strong connection. While illustrations often show these embeddings in two dimensions, real-world embeddings commonly have up to 100 or more dimensions. Such high-dimensional spaces allow each vector component to represent distinct features of meaning.
 
-Another key usage of these embeddings is to handle polysemic words, which are the same sounding/written words having different meanings as per the context. For example, consider these two sentences :-
+Another key usage of these embeddings is to handle polysemic words, which are the same sounding/written words having different meanings depending on the context. For example, consider these two sentences :-
 
 *“I ate an apple.” vs. “Apple released a new phone this year.”*
 
-Here the word “apple” is being used in a different context. Text embeddings are able to understand this and suggest contextually accurate alternatives.
+Here the word “apple” is being used in a different context. Text embeddings model these nuances, enabling more contextually accurate suggestions.
 
-
-## Language - A Challenge for Eons
-Understanding language has always been a challenge. English itself is a very funny language—full of exceptions, contradictions, and rules that even we humans struggle to follow (after all, **fish** and **ghoti** can sound the same if you’re creative enough!). So, imagine how much more difficult it is for computers to make sense of human language in all its complexity. Well thankfully, innovation and hard work throughout the ages has brought us several techniques to make things work out, and that is exactly what you will be dealing with throughout this helpful blog. You will be looking at several models which help to transform textual data to different kinds of numerical representations because, after all, that is what our computers understand. You will also see how we can use this numerical data for tons of different use cases including suggestion of similar words!
+## Understanding Languages - A Challenge for Eons
+Understanding languages has always been a challenge. English itself is a very complex language—full of exceptions, contradictions, and rules that even we humans struggle to follow (after all, **fish** and **ghoti** can sound the same if you’re creative enough!). So, imagine how much more difficult it is for computers to make sense of human language and all it's complexity. Well thankfully, innovation and hard work throughout the ages has brought us several techniques to make things work out, and that is exactly what you will be dealing with throughout this helpful blog. You will be looking at several models which help to transform textual data to different kinds of numerical representations because, after all, that is what our computers understand. You will also see how we can use this numerical data for tons of different use cases including suggestion of similar words!
 
 ## Overview of the Models
-So, what models have been invented to help us deal with textual data? A few examples are Bag of Words (BoW), TF-IDF, Word2Vec, and GloVe, each with advantages. As complicated as these may sound, they are easy to understand and have many key applications. The subsequent sections discuss these models in detail; let us first get an overview of each.
-Bag of Words: is the simplest form of text representation in numbers. Words are vectorized based on their count in the document or sample.
-TF-IDF: This algorithm works on the statistical principle of finding the word relevance in a document or a set of documents.
-Word2Vec: Words are vectorized, and these vectors capture information about the word's meaning based on the surrounding words. The word2vec algorithm estimates these representations by modeling text in a large corpus.
-GloVe: GloVe (Global Vector) is a model for distributed word representation where vector representations of words are obtained by mapping words into a meaningful space where the distance between words is related to semantic similarity.
+Several models are employed to represent and process textual data. Some of the most well-known include:
 
-Let us now move to a deeper dive into these crucial models.
+- Bag of Words: It is the simplest form of text representation in numbers. Words are vectorized based on their count in the document or sample.
+- TF-IDF: This algorithm works on the statistical principle of finding the word relevance in a document or a set of documents.
+- Word2Vec: Words are vectorized, and these vectors capture information about the word's meaning based on the surrounding words. The word2vec algorithm estimates these representations by modeling text in a large corpus.
+- GloVe: GloVe (Global Vector) is a model for distributed word representation where vector representations of words are obtained by mapping words into a meaningful space where the distance between words is related to semantic similarity.
+
+The following sections provide a deeper look into these models, along with code snippets and examples.
+
 ## Bag Of Words
-The Bag-Of-Words model is a kind of a representation which ignores the word ordering and context, but focuses on word **multiplicity**. Although being sub-optimal, it finds its used in problems where word count can be used as a feature for solving the problem. The very first reference of this model can go back to 1954! It was published in an article by **Zellig Harris**.
+The Bag-Of-Words model is a kind of a representation which ignores the word ordering and context, but focuses on word **multiplicity**. Although being sub-optimal, it is used in problems where word count can be used as a feature for solving the problem. The very first reference of this model can go back to 1954! It was published in an article by linguist **Zellig Harris**<sup>[1]</sup>.
 
-In the popular Bag Of Words Model, you **vectorize words** based on their count in the document or sample. Here’s how you can build a BOW :-
+In the popular Bag Of Words Model, you **vectorize words** based on their count in the document or sample.
+Here’s how you can build a BOW :-
 
--   You remove punctuations and lower the case
+-   You remove punctuations and lower the case.
     
 -   Then you eliminate the stopwords (words that are not meaningful for the suggestion, eg:- “and”, “or”, “the” etc.)
     
--   After this you create the count vector using different libraries, and then apply your models.
+-   After this, you create the count vector using different libraries, and then apply your models.
     
 
-Now let’s see this in action! The corpus is a small set of search queries of buying electronics :-
+Now let’s see this in action, the corpus is a small set of search queries of buying electronics, the code below does the following:
+
+1. Data Preparation: The code starts by importing the necessary libraries. It then defines a list of sample search queries related to buying electronics.
+2. Text Preprocessing: Each query is converted to lowercase, split into individual words, and then cleaned of stopwords. Finally, it’s joined back into a processed string and appended to the corpus list.
+3. Vectorization with Bag of Words: The CountVectorizer() from scikit-learn transforms the cleaned text into a numerical matrix where each column represents a word, and each row represents a document (query). The values are the counts of how often each word appears.
+4. DataFrame Creation: This matrix is converted into a pandas DataFrame, making it easier to read and interpret. The DataFrame’s columns are the words, and each row corresponds to a processed search query.
+5. Output: Finally, the code prints the resulting table, providing a clear, human-readable representation of the Bag of Words features derived from the text.
 
     import pandas as pd
     from sklearn.feature_extraction.text import CountVectorizer
@@ -106,11 +114,11 @@ Now let’s see this in action! The corpus is a small set of search queries of b
 | 9     | 0    | 1     | 0      | 0   | 0     | 0           | 0       | 0      | 0      | 0       | 0      | 0      | 0      | 0      | 0      | 1    | 0    | 0        | 0          | 1   |
 | 10    | 1    | 1     | 0      | 0   | 0     | 0           | 1       | 0      | 0      | 0       | 0      | 0      | 0      | 0      | 0      | 0    | 0    | 0        | 0          | 0   |
 
-
+This results in a matrix of word counts, highlighting the importance of various terms across documents. Although simple, BoW can be a stepping stone to more sophisticated models.
 
 
 ## Term Frequency - Inverse Document Frequency (TF-IDF)
-This algorithm works on the statistical principle of finding the **relevance of the word** in a document or a set of documents.
+TF-IDF weighs the importance of words more cleverly than BoW. This algorithm works on the statistical principle of finding the **relevance of the word** in a document or a set of documents.
 
 The term frequency (TF) score measures the **frequency of a word** occurring in the document while the inverse document frequency (IDF) measures the **rarity of the words** in the corpus. It is given more mathematical importance as some words rarely occurring in the text still might hold relevant information.
 
@@ -122,7 +130,10 @@ Where,
 
 ***Inverse Document Frequency*** $_{i,j}=log(\frac{Total\;documents}{No.\;of\;documents\;containing\;term\;i})$
 
-Here’s the representation through a code snippet:-
+Here’s the representation through a code snippet, the code does the following:-
+1. Vectorization with TF-IDF: TfidfVectorizer computes term frequency-inverse document frequency scores for each word in each document.
+2. Term Importance: TF-IDF highlights words that are important to a particular query but uncommon in the overall corpus, providing a more meaningful measure than raw counts.
+3. Data Representation: The resulting matrix is converted into a DataFrame, making it easy to see which words are most “informative” across all search queries.
 
     #tf-idf representation
     from sklearn.feature_extraction.text import TfidfVectorizer
@@ -142,31 +153,35 @@ The above snippet of code converts our corpus into a TF-IDF representation, whic
 
 
 ## **Issues with the traditional models**
-The traditional models such as the Bag Of Words (BOW) or the Term-Frequency Inverse Document Frequency (TF-IDF) models relied on trivial metrics such as the count of each word and term frequencies. This way, the words are represented as individual entities, hence they lose important properties such as ordering, contextual information, and analogous words. They also result in sparse vectors with high dimensionality which is computationally inefficient.
+While BoW and TF-IDF are important building blocks, they have limitations. They rely heavily on frequency, do not consider word order, and often produce sparse, high-dimensional representations that are computationally expensive. These models fail to capture nuanced semantic relationships or contextual meanings.
 
-Text Embeddings models such as Word2Vec, GLoVe, and BERT, represent words as dense high dimensional vectors. This way, similar words can be represented closer to each other and the context of the words is captured. For example the words “happy” and “joyful” are closer in the embedding space. Also the **word ordering is preserved**. Sentences such as “The man bit the dog” vs “The dog bit the man” are interpreted differently (as they should be), while the earlier models would capture no difference between them.
+This is where Text Embeddings shines, models such as Word2Vec, GLoVe, and BERT, represent words as dense high dimensional vectors. This way, similar words can be represented closer to each other and the context of the words is captured. For example the words “happy” and “joyful” are closer in the embedding space. Also the **word ordering is preserved**. Sentences such as “The man bit the dog” vs “The dog bit the man” are interpreted differently, while the earlier models would capture no difference between them.
 
-Let us now look at two of the most popular, and highly advanced models, Word2Vec and GloVe.
+We'll now walkthrough two of the most popular and highly advanced models, Word2Vec and GloVe.
 
 ## **Word2Vec**
-The Word2Vec model is a highly advanced machine learning model, currently being used for nearly all Natural Language Processing applications. It was developed by **Google** in 2013. The model works through two primary methods: **Continuous Bag of Words (CBOW)** and **Skip-gram**. These methods enable Word2Vec to learn word associations and place words with similar meanings close to each other in the vector space. This concept is often summarized by the phrase 	
-***"You shall know a word by the company it keeps."***
+The Word2Vec model, developed by Google in 2013, is a highly influential machine learning model widely used in Natural Language Processing (NLP). It learns vector representations of words such that words with similar meanings appear close to each other in the vector space. Two primary methods drive this learning process:
 
-Let's see how you can use the Word2Vec Model to help us with the suggestions.
-The main architecture of the model can be associated to two methods as mentioned above:-
+- Continuous Bag of Words (CBOW)
+- Skip-gram
+
+This approach is often summarized by the phrase:
+"You shall know a word by the company it keeps."
 
 **Continuous Bag Of Words (CBOW):**
 
-Here, instead of just using the count of each word, you define a sliding window which picks a target word, and its surrounding words are the context. For example:-
+Here, instead of just using the count of each word, CBOW uses a sliding window to predict a target word based on its surrounding words (context). For example:-
 ![](https://i.imgur.com/tE8Ge5B.png)
-Here the word “pipelines” is the target word, whereas the other surrounding words explain the context.
+Here the word “pipelines” is the target word, whereas the other surrounding words provide the context.
 
 The CBOW uses a **simple neural network** to process the probabilities of the suggestion. This includes an **input layer**, a single fully connected hidden layer also known as the **projection layer**, and an **output layer**. Here’s a simplified diagram of the neural network used by the CBOW method:-
 ![](https://i.imgur.com/yocbYgj.png)
 
 **Skip-gram**
-This method works **inversely** to the CBOW, where the **target word is known** and the model tries to guess the context using it. It is more effective in identifying less frequent relationships. Here’s a diagram for the Skip-gram method:-
+This method works **inversely** to the CBOW, where the **target word is known** and the model tries to guess the context using it. It is more effective in identifying less frequent relationships and capturing more nuanced semantic patterns. Here’s a diagram for the Skip-gram method:-
 ![](https://i.imgur.com/KTPm0Vc.png)
+
+**Sample Code Using Word2Vec**
 
     import gensim.downloader as api
     model = api.load("word2vec-google-news-300")
@@ -177,9 +192,12 @@ This method works **inversely** to the CBOW, where the **target word is known** 
     for word, similarity in similar_words:
         print(f"{word}: {similarity:.4f}")
 
- This very simple looking snippet uses the powerful `Word2Vec` model by Google News. The `300` tells us the dimensions of the embedded vectors. This sample tells us the most similar words to the word `computer` using the similarity score that you have looked before. 
+This code does the following:
+1. Pre-trained Model Loading: The code loads the pre-trained Google News Word2Vec model, which already has learned word meanings from a vast corpus of text.
+2. Semantic Similarity: most_similar() finds words closest in meaning to the example word “computer” by examining the vector space learned by the model.
+3. Output: The top 10 similar words and their similarity scores are printed, showcasing how Word2Vec captures semantic relationships rather than just word frequency.
  
-*Output :*
+*Output of the above example:*
 
 ![](https://i.imgur.com/cFAfH0s.jpeg)
 
@@ -187,15 +205,16 @@ This method works **inversely** to the CBOW, where the **target word is known** 
 
 ## Global Representation of Vectors (GloVe)
 
-The GloVe method for text embeddings was developed at **Stanford by Jeffrey Pennington** and others. It is referred to as **global vectors** because the entire global corpus statistics were captured directly by the model. This helps it in finding great applications in word analogies. Unlike Word2Vec which relies on local contextual windows, the GloVe model relies on the global statistical parameters from a large corpus.
+The GloVe method, developed at Stanford University by Jeffrey Pennington and collaborators, is known as Global Vectors because it leverages the entire corpus’s global statistics. Unlike Word2Vec, which focuses on local context windows, GloVe constructs a co-occurrence matrix that measures how frequently pairs of words appear together. Using this global perspective, GloVe effectively captures both semantic and syntactic relationships, making it especially powerful for discovering word analogies.
+
 
 ![](https://i.imgur.com/i7eG7bx.jpeg)
 
-For its architecture, it constructs a **co-occurrence matrix**, which captures how frequently pairs of words appear together across the entire corpus. This matrix is then used to capture the semantic relations between the words.
 
-Let’s see an example of a co-occurrence matrix in action :-
+**Co-occurrence Matrix Example**
 
-    # sample corpus
+Consider a small sample corpus:
+
     corpus = [
     "I like pathway","I like NLP","I enjoy pathway",
     "deep learning is fun","NLP is amazing","pathway is fun"
@@ -203,10 +222,10 @@ Let’s see an example of a co-occurrence matrix in action :-
 
 ![](https://i.imgur.com/aeIDOqL.jpeg)
 
-**WINDOW SIZE 2**
-Here the dimensions of the matrix are (m x m) if the number of unique words are m. Since the window size is selected as 2, it would count the co-occurrence in a window size of two words apart. Focusing on the word co-occurrence, it is able to derive much more complex and deeper relations between similar words.
 
-Let us now show you the actual power of the GloVe model with some handy code:-
+With a window size of 2, the model considers each target word and the two words surrounding it. This approach helps the model understand deeper relationships between words beyond simple frequency counts.
+
+**Sample Code Using GloVe**
 
     glove_file = 'glove.6B.100d.txt'
     glove_model = load_glove_model(glove_file)
@@ -225,7 +244,14 @@ Let us now show you the actual power of the GloVe model with some handy code:-
     for word, similarity in similar_words_glove:
         print(f"{word}: {similarity:.4f}")
 
-Here you load the GloVe model stored in the `glove.6B.100d.txt` file. the `6B` denotes the dataset that it was used to train, which contained around 6 billion tokens (words and symbols) and the `100d` (as you might have guessed), denotes that the embedded vectors are 100 dimensional. Again, you pick out the top ten most similar words, based on cosine similarity score, which are presented in the form of a list. 
+Explanation:
+
+1. Loading the GloVe Model:
+The glove.6B.100d.txt file contains the pre-trained GloVe embeddings. The “6B” indicates it was trained on a dataset with 6 billion tokens, and “100d” means each word is represented by a 100-dimensional vector.
+2. Finding Similar Words:
+The find_similar_words() function calculates the cosine similarity between the target word’s vector and every other word’s vector in the model, returning the top matches.
+3. Global Context:
+Unlike frequency-based models, GloVe embeddings capture both local context and global statistical properties, enabling more nuanced relationships to emerge.
 *Output :*
 
 ![**Output for the above code**](https://i.imgur.com/hwMVi6e.jpeg)
