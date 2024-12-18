@@ -44,7 +44,13 @@ Here the word “apple” is being used in a different context. Text embeddings 
 Understanding language has always been a challenge. English itself is a very funny language—full of exceptions, contradictions, and rules that even we humans struggle to follow (after all, **fish** and **ghoti** can sound the same if you’re creative enough!). So, imagine how much more difficult it is for computers to make sense of human language in all its complexity. Well thankfully, innovation and hard work throughout the ages has brought us several techniques to make things work out, and that is exactly what you will be dealing with throughout this helpful blog. You will be looking at several models which help to transform textual data to different kinds of numerical representations because, after all, that is what our computers understand. You will also see how we can use this numerical data for tons of different use cases including suggestion of similar words!
 
 ## Overview of the Models
+So, what models have been invented to help us deal with textual data? A few examples are Bag of Words (BoW), TF-IDF, Word2Vec, and GloVe, each with advantages. As complicated as these may sound, they are easy to understand and have many key applications. The subsequent sections discuss these models in detail; let us first get an overview of each.
+Bag of Words: is the simplest form of text representation in numbers. Words are vectorized based on their count in the document or sample.
+TF-IDF: This algorithm works on the statistical principle of finding the word relevance in a document or a set of documents.
+Word2Vec: Words are vectorized, and these vectors capture information about the word's meaning based on the surrounding words. The word2vec algorithm estimates these representations by modeling text in a large corpus.
+GloVe: GloVe (Global Vector) is a model for distributed word representation where vector representations of words are obtained by mapping words into a meaningful space where the distance between words is related to semantic similarity.
 
+Let us now move to a deeper dive into these crucial models.
 ## Bag Of Words
 The Bag-Of-Words model is a kind of a representation which ignores the word ordering and context, but focuses on word **multiplicity**. Although being sub-optimal, it finds its used in problems where word count can be used as a feature for solving the problem. The very first reference of this model can go back to 1954! It was published in an article by **Zellig Harris**.
 
