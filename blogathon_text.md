@@ -9,7 +9,7 @@ Significant advancements in the field have been achieved because of Text Embeddi
 
 Let's dive deeper into how to use Text Embeddings to help suggest similar words!
 
-## Table of Content
+## Table of Contents
 - [What are Text Embeddings?](#what-are-text-embeddings)
   - [Issues with the Traditional Models](#issues-with-the-traditional-models)
 - [Bag Of Words](#bag-of-words)
