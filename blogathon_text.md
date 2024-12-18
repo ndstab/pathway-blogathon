@@ -42,13 +42,8 @@ Understanding language has always been a challenge. English itself is a very fun
 
 ## Overview of the Models
 
-### **Issues with the traditional models**
-The traditional models such as the Bag Of Words (BOW) or the Term-Frequency Inverse Document Frequency (TF-IDF) models relied on trivial metrics such as the count of each word and term frequencies. This way, the words are represented as individual entities, hence they lose important properties such as ordering, contextual information, analogous words and sparsity due to high dimensionality.
-
-Text Embeddings models such as Word2Vec, GLoVe, and BERT, represent words as dense high dimensional vectors. This way, similar words can be represented closer to each other and the context of the words is captured. For example the words “happy” and “joyful” are closer in the embedding space. Also the **word ordering is preserved**. Sentences such as “The man bit the dog” vs “The dog bit the man” are interpreted differently (as they should be), while the earlier models would capture no difference between them.
-
-## **Bag of words**
-The Bag-Of-Words model is a kind of a representation which ignores the word ordering and context, but focuses on word **multiplicity**. Although being sub-optimal, it finds its used in problems where word count can be used as a feature for solving the problem. The very first reference of this model can go back to 1954! It was published in an article by **Zelling Harris**.
+## Bag of words
+The Bag-Of-Words model is a kind of a representation which ignores the word ordering and context, but focuses on word **multiplicity**. Although being sub-optimal, it finds its used in problems where word count can be used as a feature for solving the problem. The very first reference of this model can go back to 1954! It was published in an article by **Zellig Harris**.
 
 In the popular Bag Of Words Model, you **vectorize words** based on their count in the document or sample. Here’s how you can build a BOW :-
 
@@ -105,7 +100,7 @@ Now let’s see this in action! The corpus is a small set of search queries of b
 
 
 
-## **Term Frequency - Inverse Document Frequency (TF-IDF)**
+## Term Frequency - Inverse Document Frequency (TF-IDF)
 This algorithm works on the statistical principle of finding the **relevance of the word** in a document or a set of documents.
 
 The term frequency (TF) score measures the **frequency of a word** occurring in the document while the inverse document frequency (IDF) measures the **rarity of the words** in the corpus. It is given more mathematical importance as some words rarely occurring in the text still might hold relevant information.
@@ -135,6 +130,13 @@ The above snippet of code converts our corpus into a TF-IDF representation, whic
 *TF-IDF Table :*
 
 ![](https://i.imgur.com/W64hXDY.jpeg)
+
+
+### **Issues with the traditional models**
+The traditional models such as the Bag Of Words (BOW) or the Term-Frequency Inverse Document Frequency (TF-IDF) models relied on trivial metrics such as the count of each word and term frequencies. This way, the words are represented as individual entities, hence they lose important properties such as ordering, contextual information, analogous words and sparsity due to high dimensionality.
+
+Text Embeddings models such as Word2Vec, GLoVe, and BERT, represent words as dense high dimensional vectors. This way, similar words can be represented closer to each other and the context of the words is captured. For example the words “happy” and “joyful” are closer in the embedding space. Also the **word ordering is preserved**. Sentences such as “The man bit the dog” vs “The dog bit the man” are interpreted differently (as they should be), while the earlier models would capture no difference between them.
+
 
 ## **How are embeddings different**
 In this section you will see two of the most popular models that are currently being used in text embeddings, which are the Word2Vec model and the GloVe model.
