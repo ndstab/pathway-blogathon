@@ -38,6 +38,9 @@ Here the word “apple” is being used in a different context. Text embeddings 
 
 But what was the need for them? What did the earlier, so called “traditional” models lack that the development of new methods was required? Let’s discuss the major issues and problems that the old models faced, and how text embeddings overcame them.
 
+## Language - A Challenge for Eons
+Understanding language has always been a challenge. English itself is a very funny language—full of exceptions, contradictions, and rules that even we humans struggle to follow (after all, **fish** and **ghoti** can sound the same if you’re creative enough!). So, imagine how much more difficult it is for computers to make sense of human language in all its complexity. Well thankfully, innovation and hard work throughout the ages has brought us several techniques to make things work out, and that is exactly what you will be dealing with throughout this helpful blog. You will be looking at several models which help to transform textual data to different kinds of numerical representations because, after all, that is what our computers understand!
+
 ### **Issues with the traditional models**
 The traditional models such as the Bag Of Words (BOW) or the Term-Frequency Inverse Document Frequency (TF-IDF) models relied on trivial metrics such as the count of each word and term frequencies. This way, the words are represented as individual entities, hence they lose important properties such as ordering, contextual information, analogous words and sparsity due to high dimensionality.
 
