@@ -23,7 +23,7 @@ Let's dive deeper into how to use Text Embeddings to help suggest similar words!
 - [Citations](#citations)
 - [Authors](#authors)
 
-## **What are text embeddings?**
+## **What are Text Embeddings?**
 Text embeddings are a way to represent words or textual documents as large dimensional mathematical vectors which allows our dear “dumb” computers to understand and process them more efficiently. They transform words into numerical vectors which capture their meaning based on their **context.** In this way, words that share similar meanings, context, or analogies are placed close together in the **embedding space.** Here’s a highly simplified example of how the words are represented and what counts as being close to each other.
 
 ![](https://i.imgur.com/caRaOyN.png)
@@ -36,20 +36,19 @@ Another key usage of these embeddings is to handle polysemic words, which are th
 
 Here the word “apple” is being used in a different context. Text embeddings are able to understand this and suggest contextually accurate alternatives.
 
-But what was the need for them? What did the earlier, so called “traditional” models lack that the development of new methods was required? Let’s discuss the major issues and problems that the old models faced, and how text embeddings overcame them.
 
 ## Language - A Challenge for Eons
 Understanding language has always been a challenge. English itself is a very funny language—full of exceptions, contradictions, and rules that even we humans struggle to follow (after all, **fish** and **ghoti** can sound the same if you’re creative enough!). So, imagine how much more difficult it is for computers to make sense of human language in all its complexity. Well thankfully, innovation and hard work throughout the ages has brought us several techniques to make things work out, and that is exactly what you will be dealing with throughout this helpful blog. You will be looking at several models which help to transform textual data to different kinds of numerical representations because, after all, that is what our computers understand!
+
+## Overview of the Models
 
 ### **Issues with the traditional models**
 The traditional models such as the Bag Of Words (BOW) or the Term-Frequency Inverse Document Frequency (TF-IDF) models relied on trivial metrics such as the count of each word and term frequencies. This way, the words are represented as individual entities, hence they lose important properties such as ordering, contextual information, analogous words and sparsity due to high dimensionality.
 
 Text Embeddings models such as Word2Vec, GLoVe, and BERT, represent words as dense high dimensional vectors. This way, similar words can be represented closer to each other and the context of the words is captured. For example the words “happy” and “joyful” are closer in the embedding space. Also the **word ordering is preserved**. Sentences such as “The man bit the dog” vs “The dog bit the man” are interpreted differently (as they should be), while the earlier models would capture no difference between them.
 
-Speaking about the traditional models, let’s dive in a bit in the most used earlier models, The Bag Of Words and the Term Frequency - Inverse Document Frequency.
-
 ## **Bag of words**
-Before you start digging into them, let’s set the problem that you will be solving throughout this blog. You will be working with word suggestions for search engines. This is a really important problem for the field of Search Engine Optimization (SEO).
+The Bag-Of-Words model is a kind of a representation which ignores the word ordering and context, but focuses on word **multiplicity**. Although being sub-optimal, it finds its used in problems where word count can be used as a feature for solving the problem. The very first reference of this model can go back to 1954! It was published in an article by **Zelling Harris**.
 
 In the popular Bag Of Words Model, you **vectorize words** based on their count in the document or sample. Here’s how you can build a BOW :-
 
