@@ -132,14 +132,14 @@ The above snippet of code converts our corpus into a TF-IDF representation, whic
 ![](https://i.imgur.com/W64hXDY.jpeg)
 
 
-### **Issues with the traditional models**
+## **Issues with the traditional models**
 The traditional models such as the Bag Of Words (BOW) or the Term-Frequency Inverse Document Frequency (TF-IDF) models relied on trivial metrics such as the count of each word and term frequencies. This way, the words are represented as individual entities, hence they lose important properties such as ordering, contextual information, and analogous words. They also result in sparse vectors with high dimensionality which is computationally inefficient.
 
 Text Embeddings models such as Word2Vec, GLoVe, and BERT, represent words as dense high dimensional vectors. This way, similar words can be represented closer to each other and the context of the words is captured. For example the words “happy” and “joyful” are closer in the embedding space. Also the **word ordering is preserved**. Sentences such as “The man bit the dog” vs “The dog bit the man” are interpreted differently (as they should be), while the earlier models would capture no difference between them.
 
 Let us now look at two of the most popular, and highly advanced models, Word2Vec and GloVe.
 
-### **Word2Vec**
+## **Word2Vec**
 The Word2Vec model is a highly advanced machine learning model, currently being used for nearly all Natural Language Processing applications. It was developed by **Google** in 2013. The model works through two primary methods: **Continuous Bag of Words (CBOW)** and **Skip-gram**. These methods enable Word2Vec to learn word associations and place words with similar meanings close to each other in the vector space. This concept is often summarized by the phrase 	
 ***"You shall know a word by the company it keeps."***
 
@@ -176,7 +176,7 @@ This method works **inversely** to the CBOW, where the **target word is known** 
 
 ![](https://i.imgur.com/nPweGEP.jpeg)
 
-### Global Representation of Vectors (GloVe)
+## Global Representation of Vectors (GloVe)
 
 The GloVe method for text embeddings was developed at **Stanford by Jeffrey Pennington** and others. It is referred to as **global vectors** because the entire global corpus statistics were captured directly by the model. This helps it in finding great applications in word analogies. Unlike Word2Vec which relies on local contextual windows, the GloVe model relies on the global statistical parameters from a large corpus.
 
