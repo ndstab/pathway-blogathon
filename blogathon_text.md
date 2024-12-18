@@ -19,7 +19,7 @@ Let's dive deeper into how to use Text Embeddings to help suggest similar words!
 - [Word2Vec](#word2vec)
 - [Global Representation of Vectors (GloVe)](#global-representation-of-vectors-glove)
 - [How Text Embeddings capture analogies](#how-text-embeddings-capture-analogies)
-  - [t-SNE (t-distributed Stochastic Neighbor Embedding)](#t---sne-t---distributed-stochastic-neighbor-embedding)
+  - [t-SNE (t-distributed Stochastic Neighbor Embedding)](#t-sne-t-distributed-stochastic-neighbor-embedding)
   - [PCA (Principal Component Analysis)](#pca-principal-component-analysis)
 - [Evaluating models during production using RAG](#evaluating-models-during-production-using-rag)
 - [Conclusion](#conclusion)
